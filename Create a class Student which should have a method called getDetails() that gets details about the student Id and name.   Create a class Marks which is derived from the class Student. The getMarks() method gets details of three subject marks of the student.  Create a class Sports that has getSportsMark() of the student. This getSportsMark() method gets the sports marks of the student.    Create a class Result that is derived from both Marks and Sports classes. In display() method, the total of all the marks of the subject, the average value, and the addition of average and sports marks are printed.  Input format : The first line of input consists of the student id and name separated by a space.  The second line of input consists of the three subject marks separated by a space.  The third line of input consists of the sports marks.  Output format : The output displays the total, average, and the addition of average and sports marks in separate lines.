@@ -1,0 +1,41 @@
+// You are using GCC
+#include<iostream>
+#include<string>
+using namespace std;
+class student {
+public:
+    int id;
+    string name;
+    void getstudent() { cin >> id >> name;}
+        
+    };
+class marks : public student{
+public:
+    float m1,m2,m3;
+    void getmarks() { cin >> m1 >> m2 >> m3; }
+};
+class sports {
+public :
+    float sm;
+    void getsports (){ cin >> sm; }
+    
+};
+class result : public marks,public sports {
+public:
+    void show(){
+        float total =m1+m2+m3;
+        float avg = total/3.0;
+        cout<< "Total Marks :"<< total << endl;
+        cout <<" Average Marks :"<<avg<< endl;
+        cout<<"Total Score :"<<avg + sm<<endl;
+    }
+};
+int main(){
+    result res;
+    res.getstudent();
+    res.getmarks();
+    res.getsports();
+    res.show();
+    return 0;
+
+}
