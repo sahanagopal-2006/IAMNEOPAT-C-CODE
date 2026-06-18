@@ -1,0 +1,15 @@
+#include<iostream>
+using namespace std;
+int main(){
+    int x,y;
+    cin>>x>>y;
+    int lcm=60;
+    for(int year=x;year<=y;year++){
+        if(((year-x)) % lcm==0)
+            cout<<"All positions change in year"<<year<<endl;
+    }
+            
+        
+    
+    return 0;
+}
