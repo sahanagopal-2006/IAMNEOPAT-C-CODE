@@ -1,0 +1,40 @@
+#include<iostream>
+using namespace std;
+
+union Employee{
+    int empID;
+    char empname[20];
+    char dob[10];
+    char doj[10];
+    float salary;
+};
+
+int main(){
+    union Employee emp;
+    cin>>emp.empID;
+    cout<<"ID : "<<emp.empID<<"\n",
+    //scanf("%d",&emp.empID);
+    //printf("ID : %d\n",emp.empID);
+
+    cin>>emp.empname;
+    cout<<"Name : "<<emp.empname<<"\n";
+    //scanf("%s",emp.empname);
+    //printf("Name : %s\n",emp.empname);
+
+    cin>>emp.dob;
+    cout<<"DOB : "<<emp.dob<<"\n";
+    //scanf("%s",emp.dob);
+    //printf("DOB : %s\n",emp.dob);
+
+    cin>>emp.doj;
+    cout<<"DOJ : "<<emp.doj<<endl;
+    //scanf("%s",emp.doj);
+    //printf("DOJ : %s\n",emp.doj);
+
+    cin>>emp.salary;
+    cout<<"Salary : "<<emp.salary;
+    //scanf("%f",&emp.salary);
+    //printf("Salary : %.2f",emp.salary);
+
+
+}
