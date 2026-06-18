@@ -1,0 +1,19 @@
+include<iostream>
+#include<string>
+using namespace std;
+int main(){
+    int n;
+    if(cin>>n){
+        try{
+            if(n<0 || n>9){
+                throw string("It is not a Single Number.");
+                
+            }
+            cout<<"It is  a Single Number.";
+        }
+        catch (string errormsg){
+            cout<<errormsg;
+        }
+    }
+    return 0;
+}
