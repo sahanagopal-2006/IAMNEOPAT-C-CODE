@@ -1,0 +1,24 @@
+#include<iostream>
+#include<cstdio>
+using namespace std;
+int main(){
+   struct details{
+      char name[20];
+      int price;
+      int number;
+      int qty;
+   };
+   struct details item[50];
+   int n,i;
+   cin >> n;
+   for(i=0;i<n;i++){
+      scanf("%s",item[i].name);
+      scanf("%d",&item[i].number);
+      scanf("%d",&item[i].qty);
+      scanf("%d",&item[i].price);
+   }
+   printf("NAME | PRICE \n");
+   for(i=0;i<n;i++)
+      printf("%s %d\n",item[i].name,item[i].price*item[i].qty);
+   return 0;
+}
