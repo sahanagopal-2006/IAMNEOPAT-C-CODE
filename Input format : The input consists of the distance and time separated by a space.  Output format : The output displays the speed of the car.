@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+class journey {
+public:
+    double distance;
+    double time;
+    
+    
+};
+class car : public journey {
+public:
+    void displayspeed(){
+        double speed = distance / time;
+        cout << " speed of car:"<<speed << " km/hr"<< endl;
+        
+    }
+};
+int main (){
+    car c;
+    if(cin >> c.distance >> c.time){
+        c.displayspeed();
+    }
+    return 0;
+}
