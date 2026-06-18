@@ -1,0 +1,36 @@
+#include <iostream>
+
+using namespace std;
+
+class Parent {
+    protected:
+        int a, b;
+    public:
+        Parent(int a, int b) {
+            this->a = a;
+            this->b = b;
+        }
+        void add() {
+            cout << "Addition of the integers : " << a + b << endl;
+        }
+};
+
+class Child : public Parent {
+    public:
+        Child(int a, int b) : Parent(a, b) {}
+        void sub() {
+            cout << "Subtraction of the integers : " << a - b << endl;
+        }
+};
+
+int main() {
+    int a, b;
+    cin >> a >> b;
+
+    Child ob(a, b);
+
+    ob.add();
+    ob.sub();
+
+    return 0;
+}
