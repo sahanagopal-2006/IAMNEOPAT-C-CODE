@@ -1,0 +1,12 @@
+// You are using GCC
+#include<iostream>
+using namespace std;
+int increment(int x){
+    return x+1;
+}
+int main(){
+    int number;
+    cin>>number;
+    cout<<increment(number)<<endl;
+    return 0;
+}
