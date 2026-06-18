@@ -1,0 +1,52 @@
+#include<iostream>
+#include<string.h>
+using namespace std;
+struct Car
+{
+    char carmd[30];
+    int numcar; 
+    int  carprice;
+};
+void displaycost(struct Car cc[],int n)
+{
+    int sum=0;
+    for (int i = 0; i < n; i++) 
+    {
+       
+        sum+=cc[i].carprice;
+    }
+    cout<<sum;
+}
+void displaynumofcars(struct  Car cc[],char carmd1[30],int n)
+{
+    int sumcar=0;
+    int numcar=0;
+    for(int i=0;i<n;i++)
+    {
+        if(!(strcmp(cc[i].carmd,carmd1)))
+        {
+            numcar++;
+            sumcar+=cc[i].carprice;
+        }
+    }
+    cout<<"\n"<<numcar<<" "<<sumcar;
+    
+}
+int main()
+{
+  int n;
+  cin>>n;
+  
+  struct Car cc[n];
+  for(int i=0;i<n;i++)
+  {
+   
+   cin>>cc[i].carmd;
+   cin>>cc[i].numcar;
+   cin>>cc[i].carprice;
+  }
+  displaycost(cc,n);
+  char carmd1[30];
+  cin>>carmd1;
+  displaynumofcars(cc,carmd1,n);
+}
